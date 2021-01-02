@@ -14,6 +14,6 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]
+if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 fi
