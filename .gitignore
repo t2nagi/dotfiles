@@ -1,4 +1,1 @@
-/home/.ssh/*
-
-
-!/home/.ssh/.keep
+/Brewfile.lock.jso
