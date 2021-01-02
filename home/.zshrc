@@ -17,3 +17,8 @@ fi
 if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/t2nabi/.sdkman"
+[[ -s "/Users/t2nabi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/t2nabi/.sdkman/bin/sdkman-init.sh"
+source /Users/t2nabi/Documents/git/github.com/t2nagi/dotfiles/home/.zshrc
