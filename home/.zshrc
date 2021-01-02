@@ -1,4 +1,5 @@
 # Alias
+alias ls='ls -G'
 alias ll='ls -hl'
 alias la='ll -a'
 
@@ -13,4 +14,6 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]
+  source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+fi
