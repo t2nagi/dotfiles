@@ -22,3 +22,4 @@ cask "sourcetree"
 cask "visual-studio-code"
 cask "vlc"
 cask "vmware-fusion"
+mas "Microsoft Remote Desktop", id: 1295203466
