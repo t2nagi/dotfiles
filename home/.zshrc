@@ -1,8 +1,13 @@
+# *************************************
 # Alias
+# *************************************
 alias ls='ls -G'
 alias ll='ls -hl'
 alias la='ll -a'
 
+# *************************************
+# Homebrew
+# *************************************
 # powerlevel10k (See: https://github.com/romkatv/powerlevel10k#homebrew)
 if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
@@ -26,9 +31,17 @@ fi
 # for zsh-completion
 if [ -d /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
+  autoload -Uz compinit
+  compinit
 fi
 
 # for User-Specific completion
 if [ -d ~/.zsh/completions ]; then
   fpath=(~/.zsh/completions $fpath)
+fi
+
+# for Google Cloud Platform SDK completion
+if [ -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
