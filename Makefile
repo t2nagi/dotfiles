@@ -9,7 +9,7 @@ setup_p10k:
 	cp ./apps/powerlevel10k/.p10k.zsh $$HOME/
 
 install_homebrew:
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 install_sdkman:
 	curl -s "https://get.sdkman.io" | bash
