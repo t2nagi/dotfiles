@@ -31,8 +31,8 @@ fi
 # for zsh-completion
 if [ -d /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
-  autoload -Uz compinit
-  compinit
+  autoload -U compinit
+  compinit -u
 fi
 
 # for User-Specific completion
