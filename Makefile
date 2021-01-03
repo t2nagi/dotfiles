@@ -8,8 +8,14 @@ setup_p10k:
 	curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o ~/Library/Fonts/MesloLGS\ NF\ Bold\ Italic.ttf
 	cp ./apps/powerlevel10k/.p10k.zsh $$HOME/
 
+# install
 install_homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	cd ./apps/homebrew && brew bundle
 
 install_sdkman:
 	curl -s "https://get.sdkman.io" | bash
+
+# backup
+backup_homebrew:
+	cd ./apps/homebrew && rm -f Brewfile && brew bundle dump

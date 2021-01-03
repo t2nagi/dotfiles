@@ -9,9 +9,13 @@ alias la='ll -a'
 # Homebrew
 # *************************************
 # powerlevel10k (See: https://github.com/romkatv/powerlevel10k#homebrew)
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 fi
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
