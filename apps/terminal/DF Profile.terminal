@@ -78,8 +78,12 @@
 	TlNPYmplY3QIERokKTI3SUxRU1ddZGp3fqOlp6y3wMjLAAAAAAAAAQEAAAAAAAAAGQAA
 	AAAAAAAAAAAAAAAAANQ=
 	</data>
+	<key>columnCount</key>
+	<integer>180</integer>
 	<key>name</key>
 	<string>DF Profile</string>
+	<key>rowCount</key>
+	<integer>48</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
