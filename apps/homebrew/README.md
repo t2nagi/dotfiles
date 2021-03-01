@@ -1,9 +1,9 @@
-# Homebrew バックアップ/リストア
-## バックアップ
+# Homebrew backup/restore
+## Backup
 ```cmd
 $ brew bundle dump
 ```
-## リストア
+## Restore
 ```cmd
 $ brew bundle
 ```
