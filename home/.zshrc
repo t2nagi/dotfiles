@@ -12,29 +12,29 @@ alias la='ll -a'
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-if [[ -r /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-  source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -r $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme ]]; then
+  source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh-syntax-highlighting (See: https://github.com/zsh-users/zsh-syntax-highlighting)
-if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f $(brew --prefix zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source $(brew --prefix zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # zsh-history-substring-search (See: https://github.com/zsh-users/zsh-history-substring-search)
-if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [ -f $(brew --prefix zsh-history-substring-search)/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+  source $(brew --prefix zsh-history-substring-search)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 # zsh-autosuggestions (See: https://github.com/zsh-users/zsh-autosuggestions)
-if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f $(brew --prefix zsh-autosuggestions)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source $(brew --prefix zsh-autosuggestions)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # for zsh-completion
-if [ -d /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
+if [ -d $(brew --prefix zsh-completions)/share/zsh-completions ]; then
+  fpath=($(brew --prefix zsh-completions)/share/zsh-completions $fpath)
   autoload -U compinit
   compinit -u
 fi
